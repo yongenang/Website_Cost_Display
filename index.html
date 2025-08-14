@@ -19,6 +19,12 @@
                 background: linear-gradient(360deg, rgb(24, 24, 24), white);
             }
 
+            .header-logo {
+                top: 0;
+                height: 70px;
+                position: fixed;
+                margin-left: 330px;
+            }
             h1 {
                 font-family: "Luckiest Guy", cursive;
                 font-weight: 400;
@@ -26,7 +32,8 @@
                 font-size: 45px;
                 text-align: center;
                 margin-bottom: 20px;
-                margin-top: 10px;
+                margin-top: 60px;
+                position: static;
                 text-shadow: 2px 5px 2px rgba(138, 138, 138, 0.756);
             }
 
@@ -90,32 +97,73 @@
             }
 
             /* Responsive adjustments */
-            @media (max-width: 1024px) {
-                .element-container .list-2 li {
-                flex: 1 1 calc(33.33% - 10px); /* 3 per row */
+            /* ===== RESPONSIVE BREAKPOINTS ===== */
+            @media (max-width: 1024px) { /* Tablets */
+                .header-logo {
+                height: 60px;
+                left: 10px;
+                }
+
+                h1 {
+                    margin-top: 70px;
+                    font-size: 1.8rem;
+                }
+
+                .complex-container,
+                .element-container,
+                .addition-cost {
+                    margin-left: 50px;
+                    margin-right: 50px;
                 }
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 768px) { /* Large phones & small tablets */
+                .header-logo {
+                    height: 50px;
+                    left: 5px;
+                }
+
+                h1 {
+                    margin-top: 60px;
+                    font-size: 1.6rem;
+                }
+
+                .complex-container,
+                .element-container,
+                .addition-cost {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    padding: 10px;
+                }
+
                 .element-container .list-2 li {
                     flex: 1 1 calc(50% - 10px); /* 2 per row */
-                }
-
-                .element-container .list-2 li:nth-child(n+4) {
-                    flex: 1 1 calc(50% - 10px);
+                    margin-left: 0;
+                    margin-right: 0;
                 }
             }
 
-            @media (max-width: 480px) {
+            @media (max-width: 480px) { /* Small phones */
+                .header-logo {
+                    height: 40px;
+                    left: 5px;
+                }
+
+                h1 {
+                    margin-top: 50px;
+                    font-size: 1.4rem;
+                }
+
                 .element-container .list-2 li {
-                    flex: 1 1 100%; /* Stack on small phones */
+                    flex: 1 1 100%; /* full width per item */
                 }
             }
         </style>
 
     </head>
     <body>
-        <img src="spider.png" alt="web-logo" style="position:absolute; top: 0; margin-left:250px; height: 100px;">
+
+        <img src="spider.png" alt="web-logo" class="header-logo">
         <h1>Website Development Cost Display</h1>
 
         <div class="complex-container">
