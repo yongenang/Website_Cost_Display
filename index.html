@@ -62,14 +62,15 @@
                 background-color: rgb(255, 255, 255);
                 padding: 5px 20px;
                 max-width: 800px; /* Keeps width nice on desktop */
-                margin: 0 auto 15px auto; /* Centers and gives bottom gap */
+                margin: 0 auto 30px auto; /* Centers and gives bottom gap */
                 border-radius: 20px;
                 border: 3px black solid;
             }
 
             .complex-container .list-1,
             .addition-cost .list-3 {
-                margin-left: 20px;
+                margin-left: 15px;
+                text-align: left;
             }
 
             .element-container .list-2 {
@@ -125,7 +126,7 @@
 
                 h1 {
                     margin-top: 60px;
-                    font-size: 1.6rem;
+                    font-size: 45px;
                 }
 
                 .complex-container,
@@ -151,13 +152,13 @@
 
                 h1 {
                     margin-top: 50px;
-                    font-size: 1.4rem;
+                    font-size: 25px;
                 }
 
-    .element-container .list-2 li {
-        flex: 1 1 100%; /* full width per item */
-    }
-}
+                .element-container .list-2 li {
+                    flex: 1 1 100%; /* full width per item */
+                }
+            }
         </style>
 
     </head>
@@ -171,9 +172,9 @@
                 <h2>Website Complexity</h2>
             </div>
             <ul class="list-1" style="list-style-type: square;">
-                <li>Simple -- RM2,000 - RM5,999</li>
-                <li>Medium -- RM6,000 - RM15,999</li>
-                <li>Complex -- RM8,000 - RM25,999++</li>
+                <li>Simple -- RM2,000 - RM5,999 <span style="font-weight: bold;">(Personal Blog, Small Business, Landing Page)</span></li>
+                <li>Medium -- RM6,000 - RM15,999 <span style="font-weight: bold;">(Ecommerce, Reservation, Small Company)</span></li>
+                <li>Complex -- RM8,000 - RM25,999++ <span style="font-weight: bold;">(Social Networking, Custom Web-Application, Marketplace)</span></li>
             </ul>
         </div>
 
